@@ -29,8 +29,8 @@ jobs:
         id: names
         run: |
           OWNER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
-          echo "backend=${REGISTRY}/${OWNER}/epicbook-backend:${GITHUB_SHA}" >> "$GITHUB_OUTPUT"
-          echo "frontend=${REGISTRY}/${OWNER}/epicbook-frontend:${GITHUB_SHA}" >> "$GITHUB_OUTPUT"
+          echo "backend=${REGISTRY}/${OWNER}/epicbook-prod-backend:${GITHUB_SHA}" >> "$GITHUB_OUTPUT"
+          echo "frontend=${REGISTRY}/${OWNER}/epicbook-prod-frontend:${GITHUB_SHA}" >> "$GITHUB_OUTPUT"
 
       - uses: docker/setup-buildx-action@v3
 
